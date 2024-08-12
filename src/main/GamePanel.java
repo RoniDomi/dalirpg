@@ -40,29 +40,34 @@ public class GamePanel extends JPanel implements Runnable {
     @Override
     public void run() {
         double drawInterval = 1000000000 / FPS;
-        double nextDrawTime = System.nanoTime() + drawInterval;
+        double delta = 0;
+        long lastTime = System.nanoTime();
+        long currentTime;
 
+        long timer = 0;
+        int drawCount = 0;
+
+        // Lock FPS to 60
         while (gameThread != null) {
-            // Update
-            update();
-            // Draw
-            repaint();
+            currentTime = System.nanoTime();
 
-            // Lock fps to 60fps
-            try {
-                double remainingTime = nextDrawTime - System.nanoTime();
-                remainingTime /= 1000000;
+            delta += (currentTime - lastTime) / drawInterval;
+            timer += (currentTime - lastTime);
 
-                if (remainingTime < 0) {
-                    remainingTime = 0;
-                }
+            lastTime = currentTime;
 
-                Thread.sleep((long) remainingTime);
+            if (delta > 1) {
+                update();
+                repaint();
+                delta--;
 
-                nextDrawTime += drawInterval;
+                drawCount++;
+            }
 
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+            if (timer > 1000000000) {
+                System.out.println("FPS: " + drawCount);
+                drawCount= 0;
+                timer= 0;
             }
         }
     }
@@ -70,11 +75,11 @@ public class GamePanel extends JPanel implements Runnable {
     public void update() {
         if (keyH.upPressed) {
             playerY -= playerSpeed;
-        } else if (keyH.downPressed) {
+        } if (keyH.downPressed) {
             playerY += playerSpeed;
-        } else if (keyH.leftPressed) {
+        } if (keyH.leftPressed) {
             playerX -= playerSpeed;
-        } else if (keyH.rightPressed) {
+        } if (keyH.rightPressed) {
             playerX += playerSpeed;
         }
     }
