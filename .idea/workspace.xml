@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Added player sprites and animation">
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Made animation start only when moving">
+      <change afterPath="$PROJECT_DIR$/res/tiles/grass1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/tiles/wall1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/tiles/water1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tile/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +48,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
+    "Application.Unnamed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "player",
@@ -53,6 +59,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\src\res\player" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\src" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\player" />
@@ -62,6 +69,15 @@
       <recent name="res.player" />
       <recent name="" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="dalirpg" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -119,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723517211439</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Made animation start only when moving">
+      <option name="closed" value="true" />
+      <created>1723517909477</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723517909477</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -129,6 +153,7 @@
     <MESSAGE value="Changed fps locker and added fps logging" />
     <MESSAGE value="Added bare-bones entity class, as well as player class. Imported assets" />
     <MESSAGE value="Added player sprites and animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added player sprites and animation" />
+    <MESSAGE value="Made animation start only when moving" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made animation start only when moving" />
   </component>
 </project>
