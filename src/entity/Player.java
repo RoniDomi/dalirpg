@@ -52,42 +52,44 @@ public class Player extends Entity{
     }
 
     public void update() {
-        if (keyH.upPressed) {
-            direction = "up";
-            y -= speed;
-        } if (keyH.downPressed) {
-            direction = "down";
-            y += speed;
-        } if (keyH.leftPressed) {
-            direction = "left";
-            x -= speed;
-        } if (keyH.rightPressed) {
-            direction = "right";
-            x += speed;
-        }
-
-        // Change sprite every 10 frames
-        spriteCounter ++;
-        if (spriteCounter > 10) {
-            if (spriteNum == 1) {
-                spriteNum = 2;
-            } else if (spriteNum == 2) {
-                spriteNum = 3;
-            } else if (spriteNum == 3) {
-                spriteNum = 4;
-            } else if (spriteNum == 4) {
-                spriteNum = 1;
+            if (keyH.upPressed) {
+                direction = "up";
+                y -= speed;
+                spriteCounter ++;
+            } if (keyH.downPressed) {
+                direction = "down";
+                y += speed;
+                spriteCounter ++;
+            } if (keyH.leftPressed) {
+                direction = "left";
+                x -= speed;
+                spriteCounter ++;
+            } if (keyH.rightPressed) {
+                direction = "right";
+                x += speed;
+                spriteCounter ++;
             }
 
-            spriteCounter = 0;
-        }
+            // Change sprite every 10 frames
+            if (spriteCounter > 12) {
+                if (spriteNum == 1) {
+                    spriteNum = 2;
+                } else if (spriteNum == 2) {
+                    spriteNum = 3;
+                } else if (spriteNum == 3) {
+                    spriteNum = 4;
+                } else if (spriteNum == 4) {
+                    spriteNum = 1;
+                }
+
+                spriteCounter = 0;
+            }
     }
 
     public void draw(Graphics2D g2D) {
         BufferedImage image = null;
 
         switch (direction) {
-
             case "up":
                 if (spriteNum == 1) {
                     image = up1;
