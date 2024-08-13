@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Changed fps locker and added fps logging">
-      <change afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Added bare-bones entity class, as well as player class. Imported assets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dalirpg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dalirpg.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/tile016.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/tile017.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/tile018.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player/tile019.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +38,16 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2kZhUst3Rb0pfXMIzuzsGY3a7lk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -50,6 +57,18 @@
     "onboarding.tips.debug.path": "C:/Users/domir/IdeaProjects/dalirpg/src/Main.java"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\src\res\player" />
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\src" />
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\player" />
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="res.player" />
+      <recent name="" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -90,13 +109,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723506683256</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added bare-bones entity class, as well as player class. Imported assets">
+      <option name="closed" value="true" />
+      <created>1723513491521</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723513491521</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Basic game loop implemented" />
     <MESSAGE value="test commit" />
     <MESSAGE value="Changed fps locker and added fps logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed fps locker and added fps logging" />
+    <MESSAGE value="Added bare-bones entity class, as well as player class. Imported assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added bare-bones entity class, as well as player class. Imported assets" />
   </component>
 </project>
