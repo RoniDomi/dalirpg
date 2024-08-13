@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Added 3 basic tiles, and began implementation of tilemap drawer. Added temp grass background.">
-      <change afterPath="$PROJECT_DIR$/res/maps/map00.txt" afterDir="false" />
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Fixed player to screen center, added more assets and new map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile000.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile001.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile002.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile002.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile003.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile003.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile004.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile004.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile005.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile005.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile006.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile006.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile007.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile007.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile008.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile008.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile009.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile009.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile010.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile010.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile011.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile011.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile012.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile012.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile013.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile013.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile014.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile014.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile015.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player/tile015.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +48,7 @@
     "Application.Unnamed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "tile-automation",
+    "git-widget-placeholder": "camera",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/domir/IdeaProjects/dalirpg/src/Main.java"
@@ -163,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723561685954</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed player to screen center, added more assets and new map">
+      <option name="closed" value="true" />
+      <created>1723589581738</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723589581738</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -176,6 +169,7 @@
     <MESSAGE value="Made animation start only when moving" />
     <MESSAGE value="Added 3 basic tiles, and began implementation of tilemap drawer. Added temp grass background." />
     <MESSAGE value="Merge pull request #1 from RoniDomi/tile-map&#10;&#10;Tile map added and player finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Fixed player to screen center, added more assets and new map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed player to screen center, added more assets and new map" />
   </component>
 </project>
