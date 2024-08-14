@@ -3,12 +3,13 @@ package entity;
 import main.GamePanel;
 import main.KeyHandler;
 
+import javax.crypto.KEM;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class Player extends Entity{
+public class Player extends Entity {
     GamePanel gp;
     KeyHandler keyH;
 
@@ -59,25 +60,58 @@ public class Player extends Entity{
     }
 
     public void update() {
-            if (keyH.upPressed) {
+        if (keyH.downPressed || keyH.upPressed || keyH.leftPressed || keyH.rightPressed) {
+            if (keyH.upPressed && keyH.rightPressed) {
+                direction = "diagonal up right";
+            } else if (keyH.upPressed && keyH.leftPressed) {
+                direction = "diagonal up left";
+            } else if (keyH.downPressed && keyH.leftPressed) {
+                direction = "diagonal down left";
+            } else if (keyH.downPressed && keyH.rightPressed) {
+                direction = "diagonal down right";
+            } else if (keyH.upPressed) {
                 direction = "up";
-                worldY -= speed;
-                spriteCounter ++;
-            } if (keyH.downPressed) {
+            } else if (keyH.downPressed) {
                 direction = "down";
-                worldY += speed;
-                spriteCounter ++;
-            } if (keyH.leftPressed) {
+            } else if (keyH.leftPressed) {
                 direction = "left";
-                worldX -= speed;
-                spriteCounter ++;
-            } if (keyH.rightPressed) {
+            } else if (keyH.rightPressed) {
                 direction = "right";
-                worldX += speed;
-                spriteCounter ++;
             }
 
-            // Change sprite every 10 frames
+            // Check tile collision
+            collisionOn = false;
+            gp.cChecker.checkTile(this);
+
+            // If collision is false, player can move!
+            if (!collisionOn) {
+                switch (direction) {
+                    case "up":    worldY -= speed; break;
+                    case "down":  worldY += speed; break;
+                    case "left":  worldX -= speed; break;
+                    case "right": worldX += speed; break;
+                    case "diagonal up left":
+                        worldY -= speed;
+                        worldX -= speed;
+                        break;
+                    case "diagonal up right":
+                        worldY -= speed;
+                        worldX += speed;
+                        break;
+                    case "diagonal down left":
+                        worldY += speed;
+                        worldX -= speed;
+                        break;
+                    case "diagonal down right":
+                        worldY += speed;
+                        worldX += speed;
+                        break;
+                }
+            }
+
+            spriteCounter++;
+
+            // Change sprite every 12 frames
             if (spriteCounter > 12) {
                 if (spriteNum == 1) {
                     spriteNum = 2;
@@ -90,14 +124,16 @@ public class Player extends Entity{
                 }
 
                 spriteCounter = 0;
-            }
+                }
+        }
     }
+
 
     public void draw(Graphics2D g2D) {
         BufferedImage image = null;
 
         switch (direction) {
-            case "up":
+            case "up", "diagonal up left", "diagonal up right":
                 if (spriteNum == 1) {
                     image = up1;
                 }
@@ -111,7 +147,7 @@ public class Player extends Entity{
                     image = up4;
                 }
                 break;
-            case "down":
+            case "down", "diagonal down left", "diagonal down right":
                 if (spriteNum == 1) {
                     image = down1;
                 }
