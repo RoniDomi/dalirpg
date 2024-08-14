@@ -25,6 +25,7 @@ public class Player extends Entity{
         setDefaultValues();
         getPlayerImage();
         direction = "down";
+        solidArea = new Rectangle(8, 16, 32, 32);
     }
 
     public void setDefaultValues() {

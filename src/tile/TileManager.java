@@ -31,14 +31,17 @@ public class TileManager {
             // Wall
             tile[1] = new Tile();
             tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/wall1.png"));
+            tile[1].collision = true;
 
             // Water
             tile[2] = new Tile();
             tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/water1.png"));
+            tile[2].collision = true;
 
             // Tree
             tile[3] = new Tile();
             tile[3].image = ImageIO.read(getClass().getResourceAsStream("/tiles/tree1.png"));
+            tile[3].collision = true;
 
             // Full dirt block vertical
             tile[4] = new Tile();
@@ -105,7 +108,7 @@ public class TileManager {
                 String line = br.readLine();
 
                 while (col < gp.maxWorldCol) {
-                    String numbers[] = line.split("   ");
+                    String numbers[] = line.split(" {3}");
 
                     int num = Integer.parseInt(numbers[col]);
                     mapTileNum[col][row] = num;
