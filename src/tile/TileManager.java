@@ -13,83 +13,127 @@ public class TileManager {
     GamePanel gp;
     public Tile[] tile;
     public int mapTileNum[][];
+    public int texturePack = 1;
 
     public TileManager(GamePanel gp) {
         this.gp = gp;
         tile = new Tile[20];
         getTileImage();
         mapTileNum = new int[gp.maxWorldCol][gp.maxWorldRow];
-        loadMap("/maps/map01.txt");
+        loadMap("/maps/world01.txt");
     }
 
     public void getTileImage() {
         try {
-            // Grass
-            tile[0] = new Tile();
-            tile[0].image = ImageIO.read(getClass().getResourceAsStream("/tiles/grass1.png"));
+            switch (texturePack) {
+                case 1:
+                    // Grass
+                    tile[0] = new Tile();
+                    tile[0].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile000.png"));
 
-            // Wall
-            tile[1] = new Tile();
-            tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/wall1.png"));
-            tile[1].collision = true;
+                    // Left dirt edge
+                    tile[1] = new Tile();
+                    tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile001.png"));
 
-            // Water
-            tile[2] = new Tile();
-            tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/water1.png"));
-            tile[2].collision = true;
+                    // Right dirt edge
+                    tile[2] = new Tile();
+                    tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile002.png"));
 
-            // Tree
-            tile[3] = new Tile();
-            tile[3].image = ImageIO.read(getClass().getResourceAsStream("/tiles/tree1.png"));
-            tile[3].collision = true;
+                    // Up dirt edge
+                    tile[3] = new Tile();
+                    tile[3].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile003.png"));
 
-            // Full dirt block vertical
-            tile[4] = new Tile();
-            tile[4].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirt1.png"));
+                    // Down dirt edge
+                    tile[4] = new Tile();
+                    tile[4].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile004.png"));
 
-            // Full dirt horizontal
-            tile[5] = new Tile();
-            tile[5].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirt2.png"));
+                    // Tree
+                    tile[5] = new Tile();
+                    tile[5].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile005.png"));
+                    tile[5].collision = true;
 
-            // Slim dirt path vertical
-            tile[6] = new Tile();
-            tile[6].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirtpath1.png"));
+                    // Dirt block 1
+                    tile[6] = new Tile();
+                    tile[6].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile006.png"));
 
-            // Slim dirt path horizontal
-            tile[7] = new Tile();
-            tile[7].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirtpath2.png"));
+                    // Dirt block 2
+                    tile[7] = new Tile();
+                    tile[7].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile007.png"));
 
-            // Left dirt edge
-            tile[8] = new Tile();
-            tile[8].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirtpathedge1.png"));
+                    // Wall
+                    tile[8] = new Tile();
+                    tile[8].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile008.png"));
+                    tile[8].collision = true;
 
-            // Right dirt edge
-            tile[9] = new Tile();
-            tile[9].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirtpathedge2.png"));
+                    // Plank
+                    tile[9] = new Tile();
+                    tile[9].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile009.png"));
 
-            // Up dirt edge
-            tile[10] = new Tile();
-            tile[10].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirtpathedge3.png"));
+                    // Water
+                    tile[10] = new Tile();
+                    tile[10].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile010.png"));
+                    tile[10].collision = true;
 
-            // Down dirt edge
-            tile[11] = new Tile();
-            tile[11].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirtpathedge4.png"));
+                    // Door
+                    tile[11] = new Tile();
+                    tile[11].image = ImageIO.read(getClass().getResourceAsStream("/tiles/new/tile011.png"));
+                    tile[11].collision = true;
+                    break;
 
-            // Dirt turn left 1
-            tile[12] = new Tile();
-            tile[12].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirtturnL1.png"));
+                case 2:
+                    // Grass
+                    tile[0] = new Tile();
+                    tile[0].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/grass1.png"));
 
-            // Dirt turn left 2
-            tile[13] = new Tile();
-            tile[13].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirtturnL2.png"));
+                    // Left dirt edge
+                    tile[1] = new Tile();
+                    tile[1].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/dirtpathedge1.png"));
 
-            // Dirt turn right 1
-            tile[14] = new Tile();
-            tile[14].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirtturnR1.png"));
+                    // Right dirt edge
+                    tile[2] = new Tile();
+                    tile[2].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/dirtpathedge2.png"));
 
-            // Dirt turn right 2
-            tile[15] = new Tile();
-            tile[15].image = ImageIO.read(getClass().getResourceAsStream("/tiles/dirtturnR2.png"));
+                    // Up dirt edge
+                    tile[3] = new Tile();
+                    tile[3].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/dirtpathedge3.png"));
+
+                    // Down dirt edge
+                    tile[4] = new Tile();
+                    tile[4].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/dirtpathedge4.png"));
+
+                    // Tree
+                    tile[5] = new Tile();
+                    tile[5].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/tree1.png"));
+                    tile[5].collision = true;
+
+                    // Dirt block 1
+                    tile[6] = new Tile();
+                    tile[6].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/dirt1.png"));
+
+                    // Dirt block 2
+                    tile[7] = new Tile();
+                    tile[7].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/dirt1.png"));
+
+                    // Wall 1
+                    tile[8] = new Tile();
+                    tile[8].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/wall1.png"));
+                    tile[8].collision = true;
+
+                    // Plank
+                    tile[9] = new Tile();
+                    tile[9].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/dirt1.png"));
+
+                    // Water
+                    tile[10] = new Tile();
+                    tile[10].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/water1.png"));
+                    tile[10].collision = true;
+
+                    // Door
+                    tile[11] = new Tile();
+                    tile[11].image = ImageIO.read(getClass().getResourceAsStream("/tiles/retro/dirt1.png"));
+                    break;
+            }
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -108,7 +152,7 @@ public class TileManager {
                 String line = br.readLine();
 
                 while (col < gp.maxWorldCol) {
-                    String numbers[] = line.split(" {3}");
+                    String numbers[] = line.split(" ");
 
                     int num = Integer.parseInt(numbers[col]);
                     mapTileNum[col][row] = num;

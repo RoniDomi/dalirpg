@@ -26,7 +26,7 @@ public class Player extends Entity {
         setDefaultValues();
         getPlayerImage();
         direction = "down";
-        solidArea = new Rectangle(8, 16, 32, 32);
+        solidArea = new Rectangle(0, 16, 48, 32);
     }
 
     public void setDefaultValues() {
@@ -37,22 +37,22 @@ public class Player extends Entity {
 
     public void getPlayerImage() {
         try {
-            down1 = ImageIO.read(getClass().getResourceAsStream("/player/tile000.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/player/tile001.png"));
-            down3 = ImageIO.read(getClass().getResourceAsStream("/player/tile002.png"));
-            down4 = ImageIO.read(getClass().getResourceAsStream("/player/tile003.png"));
-            up1 = ImageIO.read(getClass().getResourceAsStream("/player/tile004.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/tile005.png"));
-            up3 = ImageIO.read(getClass().getResourceAsStream("/player/tile006.png"));
-            up4 = ImageIO.read(getClass().getResourceAsStream("/player/tile007.png"));
-            left1 = ImageIO.read(getClass().getResourceAsStream("/player/tile008.png"));
-            left2 = ImageIO.read(getClass().getResourceAsStream("/player/tile009.png"));
-            left3 = ImageIO.read(getClass().getResourceAsStream("/player/tile010.png"));
-            left4 = ImageIO.read(getClass().getResourceAsStream("/player/tile011.png"));
-            right1 = ImageIO.read(getClass().getResourceAsStream("/player/tile012.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("/player/tile013.png"));
-            right3 = ImageIO.read(getClass().getResourceAsStream("/player/tile014.png"));
-            right4 = ImageIO.read(getClass().getResourceAsStream("/player/tile015.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile000.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile001.png"));
+            down3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile002.png"));
+            down4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile003.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile004.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile005.png"));
+            up3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile006.png"));
+            up4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile007.png"));
+            left1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile008.png"));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile009.png"));
+            left3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile010.png"));
+            left4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile011.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile012.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile013.png"));
+            right3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile014.png"));
+            right4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile015.png"));
 
         } catch (IOException e) {
             e.printStackTrace();
