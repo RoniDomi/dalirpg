@@ -16,6 +16,9 @@ public class Player extends Entity {
     public final int screenX;
     public final int screenY;
 
+    int hasKey = 0;
+    boolean hasCastleKey = false;
+
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
         this.keyH = keyH;
@@ -26,7 +29,9 @@ public class Player extends Entity {
         setDefaultValues();
         getPlayerImage();
         direction = "down";
-        solidArea = new Rectangle(0, 16, 48, 32);
+        solidArea = new Rectangle(8, 16, 32, 32);
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
     }
 
     public void setDefaultValues() {
@@ -83,6 +88,10 @@ public class Player extends Entity {
             collisionOn = false;
             gp.cChecker.checkTile(this);
 
+            // Check object collision
+            int objIndex = gp.cChecker.checkObject(this, true);
+            pickUpObj(objIndex);
+
             // If collision is false, player can move!
             if (!collisionOn) {
                 switch (direction) {
@@ -128,6 +137,34 @@ public class Player extends Entity {
         }
     }
 
+    public void pickUpObj (int i) {
+        if (i != 999) {
+            String objName = gp.obj[i].name;
+
+            switch (objName) {
+                case "Key":
+                    hasKey++;
+                    gp.obj[i] = null;
+                    break;
+                case "Castle Key":
+                    hasCastleKey = true;
+                    gp.obj[i] = null;
+                    break;
+                case "Door":
+                    if (hasKey > 0) {
+                        gp.obj[i] = null;
+                        hasKey--;
+                    }
+                    break;
+                case "Castle Door":
+                    if (hasCastleKey) {
+                        gp.obj[i] = null;
+                        hasCastleKey = false;
+                    }
+                    break;
+            }
+        }
+    }
 
     public void draw(Graphics2D g2D) {
         BufferedImage image = null;

@@ -4,105 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Collision detection finished but, a little janky atm">
-      <change afterPath="$PROJECT_DIR$/res/maps/world01.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile013.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile014.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/new/tile015.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile013.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile014.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player/retro/tile015.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile000.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile002.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile003.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile004.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile005.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile006.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile007.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile008.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile009.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile010.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/new/tile011.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirt1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirt2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirtpath1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirtpath2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirtpathedge1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirtpathedge2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirtpathedge3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirtpathedge4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirtturnL1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirtturnL2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirtturnR1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/dirtturnR2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/grass1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/tree1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/wall1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/tiles/retro/water1.png" afterDir="false" />
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Changed textures, added option to change texture packs. New map added. Starting work on objects">
+      <change afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/objBoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/objChest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/objDoor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/object/objKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/maps/map01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/map01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile011.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile013.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile014.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player/tile015.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirt1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirt2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirtpath1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirtpath2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirtpathedge1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirtpathedge2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirtpathedge3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirtpathedge4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirtturnL1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirtturnL2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirtturnR1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/dirtturnR2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/grass1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/tree1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/wall1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/water1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/world01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/res/maps/world01.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="camera" />
+        <entry key="$PROJECT_DIR$" value="collision" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -142,7 +57,7 @@
     "Application.Unnamed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "collision",
+    "git-widget-placeholder": "objects",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/domir/IdeaProjects/dalirpg/src/Main.java"
@@ -282,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723659487544</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Changed textures, added option to change texture packs. New map added. Starting work on objects">
+      <option name="closed" value="true" />
+      <created>1723773792426</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723773792426</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -300,7 +223,8 @@
     <MESSAGE value="Changed entity to concrete class, starting collision detection" />
     <MESSAGE value="Upwards collision and fixed&#10;diagonal movement" />
     <MESSAGE value="Collision detection finished but, a little janky atm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Collision detection finished but, a little janky atm" />
+    <MESSAGE value="Changed textures, added option to change texture packs. New map added. Starting work on objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed textures, added option to change texture packs. New map added. Starting work on objects" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
