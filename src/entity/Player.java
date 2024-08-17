@@ -3,17 +3,25 @@ package entity;
 import main.GamePanel;
 import main.KeyHandler;
 
+import javax.crypto.KEM;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 
-public class Player extends Entity{
+public class Player extends Entity {
     GamePanel gp;
     KeyHandler keyH;
 
     public final int screenX;
     public final int screenY;
+    public int spriteChangeCount = 12;
+    public final int sprintSpeed = 6;
+    public final int defaultSpeed = 4;
+
+    int hasKey = 0;
+    boolean hasCastleKey = false;
+    boolean runningShoesEquipped = false;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
@@ -25,6 +33,9 @@ public class Player extends Entity{
         setDefaultValues();
         getPlayerImage();
         direction = "down";
+        solidArea = new Rectangle(8, 16, 32, 32);
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
     }
 
     public void setDefaultValues() {
@@ -35,22 +46,22 @@ public class Player extends Entity{
 
     public void getPlayerImage() {
         try {
-            down1 = ImageIO.read(getClass().getResourceAsStream("/player/tile000.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/player/tile001.png"));
-            down3 = ImageIO.read(getClass().getResourceAsStream("/player/tile002.png"));
-            down4 = ImageIO.read(getClass().getResourceAsStream("/player/tile003.png"));
-            up1 = ImageIO.read(getClass().getResourceAsStream("/player/tile004.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/tile005.png"));
-            up3 = ImageIO.read(getClass().getResourceAsStream("/player/tile006.png"));
-            up4 = ImageIO.read(getClass().getResourceAsStream("/player/tile007.png"));
-            left1 = ImageIO.read(getClass().getResourceAsStream("/player/tile008.png"));
-            left2 = ImageIO.read(getClass().getResourceAsStream("/player/tile009.png"));
-            left3 = ImageIO.read(getClass().getResourceAsStream("/player/tile010.png"));
-            left4 = ImageIO.read(getClass().getResourceAsStream("/player/tile011.png"));
-            right1 = ImageIO.read(getClass().getResourceAsStream("/player/tile012.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("/player/tile013.png"));
-            right3 = ImageIO.read(getClass().getResourceAsStream("/player/tile014.png"));
-            right4 = ImageIO.read(getClass().getResourceAsStream("/player/tile015.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile000.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile001.png"));
+            down3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile002.png"));
+            down4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile003.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile004.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile005.png"));
+            up3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile006.png"));
+            up4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile007.png"));
+            left1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile008.png"));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile009.png"));
+            left3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile010.png"));
+            left4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile011.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile012.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile013.png"));
+            right3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile014.png"));
+            right4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile015.png"));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,26 +69,67 @@ public class Player extends Entity{
     }
 
     public void update() {
-            if (keyH.upPressed) {
+        if (keyH.downPressed || keyH.upPressed || keyH.leftPressed || keyH.rightPressed) {
+
+            speed = keyH.lShiftPressed && runningShoesEquipped ? sprintSpeed : defaultSpeed;
+            spriteChangeCount = speed > 4 ? 8 : 12;
+
+            if (keyH.upPressed && keyH.rightPressed) {
+                direction = "diagonal up right";
+            } else if (keyH.upPressed && keyH.leftPressed) {
+                direction = "diagonal up left";
+            } else if (keyH.downPressed && keyH.leftPressed) {
+                direction = "diagonal down left";
+            } else if (keyH.downPressed && keyH.rightPressed) {
+                direction = "diagonal down right";
+            } else if (keyH.upPressed) {
                 direction = "up";
-                worldY -= speed;
-                spriteCounter ++;
-            } if (keyH.downPressed) {
+            } else if (keyH.downPressed) {
                 direction = "down";
-                worldY += speed;
-                spriteCounter ++;
-            } if (keyH.leftPressed) {
+            } else if (keyH.leftPressed) {
                 direction = "left";
-                worldX -= speed;
-                spriteCounter ++;
-            } if (keyH.rightPressed) {
+            } else if (keyH.rightPressed) {
                 direction = "right";
-                worldX += speed;
-                spriteCounter ++;
             }
 
-            // Change sprite every 10 frames
-            if (spriteCounter > 12) {
+            // Check tile collision
+            collisionOn = false;
+            gp.cChecker.checkTile(this);
+
+            // Check object collision
+            int objIndex = gp.cChecker.checkObject(this, true);
+            pickUpObj(objIndex);
+
+            // If collision is false, player can move!
+            if (!collisionOn) {
+                switch (direction) {
+                    case "up":    worldY -= speed; break;
+                    case "down":  worldY += speed; break;
+                    case "left":  worldX -= speed; break;
+                    case "right": worldX += speed; break;
+                    case "diagonal up left":
+                        worldY -= speed;
+                        worldX -= speed;
+                        break;
+                    case "diagonal up right":
+                        worldY -= speed;
+                        worldX += speed;
+                        break;
+                    case "diagonal down left":
+                        worldY += speed;
+                        worldX -= speed;
+                        break;
+                    case "diagonal down right":
+                        worldY += speed;
+                        worldX += speed;
+                        break;
+                }
+            }
+
+            spriteCounter++;
+
+            // Change sprite every x frames
+            if (spriteCounter > spriteChangeCount) {
                 if (spriteNum == 1) {
                     spriteNum = 2;
                 } else if (spriteNum == 2) {
@@ -89,14 +141,48 @@ public class Player extends Entity{
                 }
 
                 spriteCounter = 0;
+                }
+        }
+    }
+
+    public void pickUpObj (int i) {
+        if (i != 999) {
+            String objName = gp.obj[i].name;
+
+            switch (objName) {
+                case "Key":
+                    hasKey++;
+                    gp.obj[i] = null;
+                    break;
+                case "Castle Key":
+                    hasCastleKey = true;
+                    gp.obj[i] = null;
+                    break;
+                case "Door":
+                    if (hasKey > 0) {
+                        gp.obj[i] = null;
+                        hasKey--;
+                    }
+                    break;
+                case "Castle Door":
+                    if (hasCastleKey) {
+                        gp.obj[i] = null;
+                        hasCastleKey = false;
+                    }
+                    break;
+                case "Boot":
+                    runningShoesEquipped = true;
+                    gp.obj[7] = null;
+                    break;
             }
+        }
     }
 
     public void draw(Graphics2D g2D) {
         BufferedImage image = null;
 
         switch (direction) {
-            case "up":
+            case "up", "diagonal up left", "diagonal up right":
                 if (spriteNum == 1) {
                     image = up1;
                 }
@@ -110,7 +196,7 @@ public class Player extends Entity{
                     image = up4;
                 }
                 break;
-            case "down":
+            case "down", "diagonal down left", "diagonal down right":
                 if (spriteNum == 1) {
                     image = down1;
                 }
