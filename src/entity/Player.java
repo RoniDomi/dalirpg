@@ -15,9 +15,13 @@ public class Player extends Entity {
 
     public final int screenX;
     public final int screenY;
+    public int spriteChangeCount = 12;
+    public final int sprintSpeed = 6;
+    public final int defaultSpeed = 4;
 
     int hasKey = 0;
     boolean hasCastleKey = false;
+    boolean runningShoesEquipped = false;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
@@ -66,6 +70,10 @@ public class Player extends Entity {
 
     public void update() {
         if (keyH.downPressed || keyH.upPressed || keyH.leftPressed || keyH.rightPressed) {
+
+            speed = keyH.lShiftPressed && runningShoesEquipped ? sprintSpeed : defaultSpeed;
+            spriteChangeCount = speed > 4 ? 8 : 12;
+
             if (keyH.upPressed && keyH.rightPressed) {
                 direction = "diagonal up right";
             } else if (keyH.upPressed && keyH.leftPressed) {
@@ -120,8 +128,8 @@ public class Player extends Entity {
 
             spriteCounter++;
 
-            // Change sprite every 12 frames
-            if (spriteCounter > 12) {
+            // Change sprite every x frames
+            if (spriteCounter > spriteChangeCount) {
                 if (spriteNum == 1) {
                     spriteNum = 2;
                 } else if (spriteNum == 2) {
@@ -161,6 +169,10 @@ public class Player extends Entity {
                         gp.obj[i] = null;
                         hasCastleKey = false;
                     }
+                    break;
+                case "Boot":
+                    runningShoesEquipped = true;
+                    gp.obj[7] = null;
                     break;
             }
         }
