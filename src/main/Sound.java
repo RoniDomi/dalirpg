@@ -11,9 +11,9 @@ public class Sound {
 
     public Sound() {
         soundUrl[0] = getClass().getResource("/sound/sonatina_letsadventure_4IslandScenery.wav");
-        soundUrl[1] = getClass().getResource("/sound/033_Denied_03.wav");
-        soundUrl[2] = getClass().getResource("/sound/051_use_item_01.wav");
-        soundUrl[3] = getClass().getResource("/sound/070_Equip_10.wav");
+        soundUrl[1] = getClass().getResource("/sound/denied.wav");
+        soundUrl[2] = getClass().getResource("/sound/use.wav");
+        soundUrl[3] = getClass().getResource("/sound/equip.wav");
         soundUrl[4] = getClass().getResource("/sound/mixkit-bonus-earned-in-video-game-2058.wav");
     }
 

@@ -72,7 +72,7 @@ public class Player extends Entity {
         if (keyH.downPressed || keyH.upPressed || keyH.leftPressed || keyH.rightPressed) {
 
             speed = keyH.lShiftPressed && runningShoesEquipped ? sprintSpeed : defaultSpeed;
-            spriteChangeCount = speed > 4 ? 8 : 12;
+            spriteChangeCount = speed > 4 ? 6 : 12;
 
             if (keyH.upPressed && keyH.rightPressed) {
                 direction = "diagonal up right";
@@ -153,26 +153,35 @@ public class Player extends Entity {
                 case "Key":
                     hasKey++;
                     gp.obj[i] = null;
+                    gp.playSFX(4);
                     break;
                 case "Castle Key":
                     hasCastleKey = true;
                     gp.obj[i] = null;
+                    gp.playSFX(4);
                     break;
                 case "Door":
                     if (hasKey > 0) {
                         gp.obj[i] = null;
                         hasKey--;
+                        gp.playSFX(2);
+                    } else {
+                        gp.playSFX(1);
                     }
                     break;
                 case "Castle Door":
                     if (hasCastleKey) {
                         gp.obj[i] = null;
                         hasCastleKey = false;
+                        gp.playSFX(2);
+                    } else {
+                        gp.playSFX(1);
                     }
                     break;
                 case "Boot":
                     runningShoesEquipped = true;
                     gp.obj[7] = null;
+                    gp.playSFX(3);
                     break;
             }
         }
