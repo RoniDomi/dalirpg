@@ -3,7 +3,6 @@ package entity;
 import main.GamePanel;
 import main.KeyHandler;
 
-import javax.crypto.KEM;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -19,7 +18,7 @@ public class Player extends Entity {
     public final int sprintSpeed = 6;
     public final int defaultSpeed = 4;
 
-    int hasKey = 0;
+    public int hasKey = 0;
     boolean hasCastleKey = false;
     boolean runningShoesEquipped = false;
 
@@ -154,11 +153,14 @@ public class Player extends Entity {
                     hasKey++;
                     gp.obj[i] = null;
                     gp.playSFX(4);
+                    gp.ui.showMessage("You got a Key!");
                     break;
                 case "Castle Key":
                     hasCastleKey = true;
+                    hasKey++;
                     gp.obj[i] = null;
                     gp.playSFX(4);
+                    gp.ui.showMessage("You got a Castle Key!");
                     break;
                 case "Door":
                     if (hasKey > 0) {
@@ -171,7 +173,8 @@ public class Player extends Entity {
                     break;
                 case "Castle Door":
                     if (hasCastleKey) {
-                        gp.obj[i] = null;
+                        gp.obj[2] = null;
+                        gp.obj[3] = null;
                         hasCastleKey = false;
                         gp.playSFX(2);
                     } else {
@@ -180,7 +183,7 @@ public class Player extends Entity {
                     break;
                 case "Boot":
                     runningShoesEquipped = true;
-                    gp.obj[7] = null;
+                    gp.obj[i] = null;
                     gp.playSFX(3);
                     break;
             }

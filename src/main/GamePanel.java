@@ -27,7 +27,9 @@ public class GamePanel extends JPanel implements Runnable {
     // System
     TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler();
-    public Sound sound = new Sound();
+    public Sound music = new Sound();
+    public Sound sfx = new Sound();
+    public UI ui = new UI(this);
     public CollisionChecker cChecker = new CollisionChecker(this);
     public AssetSetter aSetter = new AssetSetter(this);
     Thread gameThread;
@@ -116,21 +118,22 @@ public class GamePanel extends JPanel implements Runnable {
         // Player
         player.draw(g2D);
 
+        // UI
+        ui.draw(g2D);
+
         g2D.dispose();
     }
 
     public void playMusic(int i) {
-        sound.setFile(i);
-        sound.play();
-        sound.loop();
+        music.setFile(i);
+        music.play();
+        music.loop();
     }
 
-    public void stopMusic() {
-        sound.stop();
-    }
+    public void stopMusic() {music.stop();}
 
     public void playSFX(int i) {
-        sound.setFile(i);
-        sound.play();
+        sfx.setFile(i);
+        sfx.play();
     }
 }

@@ -1,9 +1,6 @@
 package main;
 
-import object.objBoot;
-import object.objChest;
-import object.objDoor;
-import object.objKey;
+import object.*;
 
 public class AssetSetter {
 
@@ -23,13 +20,11 @@ public class AssetSetter {
         gp.obj[1].worldX = 29 * gp.tileSize;
         gp.obj[1].worldY = 13 * gp.tileSize;
 
-        gp.obj[2] = new objDoor();
-        gp.obj[2].name = "Castle Door";
+        gp.obj[2] = new CastleDoor();
         gp.obj[2].worldX = 14 * gp.tileSize;
         gp.obj[2].worldY = 20 * gp.tileSize;
 
-        gp.obj[3] = new objDoor();
-        gp.obj[3].name = "Castle Door";
+        gp.obj[3] = new CastleDoor();
         gp.obj[3].worldX = 15 * gp.tileSize;
         gp.obj[3].worldY = 20 * gp.tileSize;
 
