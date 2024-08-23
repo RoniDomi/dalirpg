@@ -1,18 +1,20 @@
 package object;
 
+import main.GamePanel;
+
 import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class objChest extends SuperObject{
-    public BufferedImage openedChest;
+    GamePanel gp;
 
-    public objChest() {
+    public objChest(GamePanel gp) {
         name = "Chest";
+        this.gp = gp;
 
         try {
             image = ImageIO.read(getClass().getResourceAsStream("/objects/chest1.png"));
-            openedChest = ImageIO.read(getClass().getResourceAsStream("/objects/chest2.png"));
+            uTool.scaledImage(image, gp.tileSize, gp.tileSize);
         } catch (IOException e) {
             e.printStackTrace();
         }

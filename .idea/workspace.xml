@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Minimal ui added">
-      <change afterPath="$PROJECT_DIR$/res/sound/mixkit-game-level-completed-2059.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/UtilityTool.java" afterDir="false" />
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Optimized player and tile image loading and scaling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/tiles/new/tile011.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UtilityTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UtilityTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/CastleDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/CastleDoor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/objBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objBoot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/object/objChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objChest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/objDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objDoor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/objKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -244,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724002723977</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Optimized player and tile image loading and scaling">
+      <option name="closed" value="true" />
+      <created>1724379846260</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724379846260</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -268,7 +276,8 @@
     <MESSAGE value="Added sound class and bg music player" />
     <MESSAGE value="Finished sound however sfx can be spammed..." />
     <MESSAGE value="Minimal ui added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minimal ui added" />
+    <MESSAGE value="Optimized player and tile image loading and scaling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized player and tile image loading and scaling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

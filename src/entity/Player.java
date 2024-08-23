@@ -274,6 +274,6 @@ public class Player extends Entity {
                 break;
         }
 
-        g2D.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+        g2D.drawImage(image, screenX, screenY, null);
     }
 }
