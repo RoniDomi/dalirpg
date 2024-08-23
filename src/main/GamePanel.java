@@ -27,8 +27,8 @@ public class GamePanel extends JPanel implements Runnable {
     // System
     TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler();
-    public Sound music = new Sound();
-    public Sound sfx = new Sound();
+    Sound music = new Sound();
+    Sound sfx = new Sound();
     public UI ui = new UI(this);
     public CollisionChecker cChecker = new CollisionChecker(this);
     public AssetSetter aSetter = new AssetSetter(this);
@@ -105,6 +105,10 @@ public class GamePanel extends JPanel implements Runnable {
 
         Graphics2D g2D = (Graphics2D) g;
 
+        // DEBUG
+        long drawStart = 0;
+        drawStart = System.nanoTime();
+
         // Tiles
         tileM.draw(g2D);
 
@@ -120,6 +124,14 @@ public class GamePanel extends JPanel implements Runnable {
 
         // UI
         ui.draw(g2D);
+        if (keyH.checkDrawTime) {
+            long endTime = System.nanoTime();
+            long time = endTime - drawStart;
+
+            g2D.setColor(Color.white);
+            g2D.drawString("Draw time: " + time, 10, 400);
+            System.out.println(time);
+        }
 
         g2D.dispose();
     }

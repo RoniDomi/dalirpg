@@ -15,6 +15,7 @@ public class Sound {
         soundUrl[2] = getClass().getResource("/sound/use.wav");
         soundUrl[3] = getClass().getResource("/sound/equip.wav");
         soundUrl[4] = getClass().getResource("/sound/mixkit-bonus-earned-in-video-game-2058.wav");
+        soundUrl[5] = getClass().getResource("/sound/mixkit-game-level-completed-2059.wav");
     }
 
     public void setFile(int i) {

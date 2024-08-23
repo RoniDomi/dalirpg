@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Finished sound however sfx can be spammed...">
-      <change afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/CastleDoor.java" afterDir="false" />
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Minimal ui added">
+      <change afterPath="$PROJECT_DIR$/res/sound/mixkit-game-level-completed-2059.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/UtilityTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/tiles/new/tile011.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/objChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objChest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="sounds" />
+        <entry key="$PROJECT_DIR$" value="ui" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +56,7 @@
     "Application.Unnamed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "ui",
+    "git-widget-placeholder": "utility",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/domir/IdeaProjects/dalirpg/src/Main.java"
@@ -58,11 +64,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\objects" />
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles\new" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\sound" />
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\objects" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\maps" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles" />
-      <recent name="C:\Users\domir\IdeaProjects\dalirpg\src\res\player" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="res.player" />
@@ -230,7 +236,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723919279768</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Minimal ui added">
+      <option name="closed" value="true" />
+      <created>1724002723977</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1724002723977</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -253,7 +267,8 @@
     <MESSAGE value="Added running shoes and toggleable running" />
     <MESSAGE value="Added sound class and bg music player" />
     <MESSAGE value="Finished sound however sfx can be spammed..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished sound however sfx can be spammed..." />
+    <MESSAGE value="Minimal ui added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minimal ui added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

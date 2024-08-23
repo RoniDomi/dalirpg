@@ -2,6 +2,8 @@ package entity;
 
 import main.GamePanel;
 import main.KeyHandler;
+import main.UtilityTool;
+import object.objChest;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -44,27 +46,36 @@ public class Player extends Entity {
     }
 
     public void getPlayerImage() {
-        try {
-            down1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile000.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile001.png"));
-            down3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile002.png"));
-            down4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile003.png"));
-            up1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile004.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile005.png"));
-            up3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile006.png"));
-            up4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile007.png"));
-            left1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile008.png"));
-            left2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile009.png"));
-            left3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile010.png"));
-            left4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile011.png"));
-            right1 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile012.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile013.png"));
-            right3 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile014.png"));
-            right4 = ImageIO.read(getClass().getResourceAsStream("/player/new/tile015.png"));
+        down1 = setup("tile000");
+        down2 = setup("tile001");
+        down3 = setup("tile002");
+        down4 = setup("tile003");
+        up1 = setup("tile004");
+        up2 = setup("tile005");
+        up3 = setup("tile006");
+        up4 = setup("tile007");
+        left1 = setup("tile008");
+        left2 = setup("tile009");
+        left3 = setup("tile010");
+        left4 = setup("tile011");
+        right1 = setup("tile012");
+        right2 = setup("tile013");
+        right3 = setup("tile014");
+        right4 = setup("tile015");
+    }
 
+    public BufferedImage setup (String imageName) {
+        UtilityTool uTool = new UtilityTool();
+        BufferedImage image = null;
+
+        try {
+            image = ImageIO.read(getClass().getResourceAsStream("/player/new/" + imageName + ".png"));
+            image = uTool.scaledImage(image, gp.tileSize, gp.tileSize);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        return image;
     }
 
     public void update() {
@@ -167,7 +178,9 @@ public class Player extends Entity {
                         gp.obj[i] = null;
                         hasKey--;
                         gp.playSFX(2);
+                        gp.ui.showMessage("Door unlocked!");
                     } else {
+                        gp.ui.showMessage("You don't have a key!");
                         gp.playSFX(1);
                     }
                     break;
@@ -177,7 +190,10 @@ public class Player extends Entity {
                         gp.obj[3] = null;
                         hasCastleKey = false;
                         gp.playSFX(2);
+                        gp.ui.showMessage("Doors unlocked!");
+                        hasKey--;
                     } else {
+                        gp.ui.showMessage("You don't have a key!");
                         gp.playSFX(1);
                     }
                     break;
@@ -185,6 +201,12 @@ public class Player extends Entity {
                     runningShoesEquipped = true;
                     gp.obj[i] = null;
                     gp.playSFX(3);
+                    gp.ui.showMessage("Acquired running boots! Press SHIFT to run!");
+                    break;
+                case "Chest":
+                    gp.ui.gameFinished = true;
+                    gp.stopMusic();
+                    gp.playSFX(5);
                     break;
             }
         }
