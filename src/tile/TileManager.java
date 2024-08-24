@@ -18,28 +18,23 @@ public class TileManager {
 
     public TileManager(GamePanel gp) {
         this.gp = gp;
-        tile = new Tile[20];
+        tile = new Tile[50];
         getTileImage();
         mapTileNum = new int[gp.maxWorldCol][gp.maxWorldRow];
-        loadMap("/maps/world01.txt");
+        loadMap("/maps/worldmap.txt");
     }
 
     public void getTileImage() {
         // Grass
         setup(0, "tile000", false);
-        // Left dirt edge
         setup(1, "tile001", false);
-        // Right dirt edge
         setup(2, "tile002", false);
-        // Up dirt edge
         setup(3, "tile003", false);
-        // Down dirt edge
         setup(4, "tile004", false);
         // Tree
         setup(5, "tile005", true);
-        // Dirt block 1
+        // Dirt
         setup(6, "tile006", false);
-        // Dirt block 2
         setup(7, "tile007", false);
         // Wall
         setup(8, "tile008", true);
@@ -47,6 +42,34 @@ public class TileManager {
         setup(9, "tile009", false);
         // Water
         setup(10, "tile010", true);
+        // More grass
+        setup(11, "tile011", false);
+        setup(12, "tile012", false);
+        setup(13, "tile013", false);
+        setup(14, "tile014", false);
+        setup(15, "tile015", false);
+        setup(16, "tile016", false);
+        setup(17, "tile017", false);
+        setup(18, "tile018", false);
+        setup(19, "tile019", false);
+        // Water edges
+        setup(20, "tile020", true);
+        setup(21, "tile021", true);
+        setup(22, "tile022", true);
+        setup(23, "tile023", true);
+        setup(24, "tile024", true);
+        setup(25, "tile025", true);
+        setup(26, "tile026", true);
+        setup(27, "tile027", true);
+        setup(28, "tile028", true);
+        setup(29, "tile029", true);
+        setup(30, "tile030", true);
+        setup(31, "tile031", true);
+        // Grass turns
+        setup(32, "tile032", false);
+        setup(33, "tile033", false);
+        setup(34, "tile034", false);
+        setup(35, "tile035", false);
     }
 
     public void setup(int index, String imgPath, boolean collision) {

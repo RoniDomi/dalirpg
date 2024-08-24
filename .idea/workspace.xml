@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Optimized player and tile image loading and scaling">
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Added new tiles and map">
+      <change afterPath="$PROJECT_DIR$/res/maps/worldmap.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/maps/worldmap001.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/tiles/new/tile036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/tiles/new/tile037.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/tiles/new/tile038.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/tiles/new/tile039.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/UtilityTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UtilityTool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/CastleDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/CastleDoor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/objBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objBoot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/objChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objChest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/objDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objDoor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/object/objKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="ui" />
+        <entry key="$PROJECT_DIR$" value="utility" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +57,7 @@
     "Application.Unnamed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "utility",
+    "git-widget-placeholder": "game-state",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/domir/IdeaProjects/dalirpg/src/Main.java"
@@ -252,7 +253,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724379846260</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Object optimization also added">
+      <option name="closed" value="true" />
+      <created>1724382743493</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724382743493</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added new tiles and map">
+      <option name="closed" value="true" />
+      <created>1724451888702</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1724451888702</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -277,7 +294,9 @@
     <MESSAGE value="Finished sound however sfx can be spammed..." />
     <MESSAGE value="Minimal ui added" />
     <MESSAGE value="Optimized player and tile image loading and scaling" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimized player and tile image loading and scaling" />
+    <MESSAGE value="Object optimization also added" />
+    <MESSAGE value="Added new tiles and map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new tiles and map" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
