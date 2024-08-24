@@ -19,9 +19,6 @@ public class Player extends Entity {
     public int spriteChangeCount = 12;
     public final int sprintSpeed = 6;
     public final int defaultSpeed = 4;
-
-    public int hasKey = 0;
-    boolean hasCastleKey = false;
     boolean runningShoesEquipped = false;
 
     public Player(GamePanel gp, KeyHandler keyH) {
@@ -40,7 +37,7 @@ public class Player extends Entity {
     }
 
     public void setDefaultValues() {
-        worldX = gp.tileSize * 25;
+        worldX = gp.tileSize * 30;
         worldY = gp.tileSize * 45;
         speed = 4;
     }
@@ -157,58 +154,7 @@ public class Player extends Entity {
 
     public void pickUpObj (int i) {
         if (i != 999) {
-            String objName = gp.obj[i].name;
 
-            switch (objName) {
-                case "Key":
-                    hasKey++;
-                    gp.obj[i] = null;
-                    gp.playSFX(4);
-                    gp.ui.showMessage("You got a Key!");
-                    break;
-                case "Castle Key":
-                    hasCastleKey = true;
-                    hasKey++;
-                    gp.obj[i] = null;
-                    gp.playSFX(4);
-                    gp.ui.showMessage("You got a Castle Key!");
-                    break;
-                case "Door":
-                    if (hasKey > 0) {
-                        gp.obj[i] = null;
-                        hasKey--;
-                        gp.playSFX(2);
-                        gp.ui.showMessage("Door unlocked!");
-                    } else {
-                        gp.ui.showMessage("You don't have a key!");
-                        gp.playSFX(1);
-                    }
-                    break;
-                case "Castle Door":
-                    if (hasCastleKey) {
-                        gp.obj[2] = null;
-                        gp.obj[3] = null;
-                        hasCastleKey = false;
-                        gp.playSFX(2);
-                        gp.ui.showMessage("Doors unlocked!");
-                        hasKey--;
-                    } else {
-                        gp.ui.showMessage("You don't have a key!");
-                        gp.playSFX(1);
-                    }
-                    break;
-                case "Boot":
-                    runningShoesEquipped = true;
-                    gp.obj[i] = null;
-                    gp.playSFX(3);
-                    gp.ui.showMessage("Acquired running boots! Press SHIFT to run!");
-                    break;
-                case "Chest":
-                    gp.ui.gameFinished = true;
-                    gp.stopMusic();
-                    gp.playSFX(5);
-                    break;
-            }
         }
     }
 
