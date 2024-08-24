@@ -52,6 +52,16 @@ public class KeyHandler implements KeyListener {
                 checkDrawTime = false;
             }
         }
+
+        if (code == KeyEvent.VK_M) {
+            if (gp.musicStopped) {
+                gp.playMusic(0);
+                gp.musicStopped = false;
+            } else if (!gp.musicStopped) {
+                gp.stopMusic();
+                gp.musicStopped = true;
+            }
+        }
     }
 
     @Override
