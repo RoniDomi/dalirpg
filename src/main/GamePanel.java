@@ -20,18 +20,22 @@ public class GamePanel extends JPanel implements Runnable {
     // World Map Settings
     public final int maxWorldCol = 50;
     public final int maxWorldRow = 50;
-    public final int worldWidth = tileSize * maxWorldCol;
-    public final int worldHeight = tileSize * maxWorldRow;
 
     // FPS
     int FPS = 60;
 
+    // System
     TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler();
-    Thread gameThread;
+    Sound music = new Sound();
+    Sound sfx = new Sound();
+    public UI ui = new UI(this);
     public CollisionChecker cChecker = new CollisionChecker(this);
     public AssetSetter aSetter = new AssetSetter(this);
+    Thread gameThread;
 
+
+    // Entities and Objects
     public Player player = new Player(this, keyH);
     public SuperObject obj[] = new SuperObject[10];
 
@@ -52,6 +56,8 @@ public class GamePanel extends JPanel implements Runnable {
     public void startGameThread() {
         gameThread = new Thread(this);
         gameThread.start();
+
+        playMusic(0);
     }
 
     @Override
@@ -99,6 +105,10 @@ public class GamePanel extends JPanel implements Runnable {
 
         Graphics2D g2D = (Graphics2D) g;
 
+        // DEBUG
+        long drawStart = 0;
+        drawStart = System.nanoTime();
+
         // Tiles
         tileM.draw(g2D);
 
@@ -112,6 +122,30 @@ public class GamePanel extends JPanel implements Runnable {
         // Player
         player.draw(g2D);
 
+        // UI
+        ui.draw(g2D);
+        if (keyH.checkDrawTime) {
+            long endTime = System.nanoTime();
+            long time = endTime - drawStart;
+
+            g2D.setColor(Color.white);
+            g2D.drawString("Draw time: " + time, 10, 400);
+            System.out.println(time);
+        }
+
         g2D.dispose();
+    }
+
+    public void playMusic(int i) {
+        music.setFile(i);
+        music.play();
+        music.loop();
+    }
+
+    public void stopMusic() {music.stop();}
+
+    public void playSFX(int i) {
+        sfx.setFile(i);
+        sfx.play();
     }
 }

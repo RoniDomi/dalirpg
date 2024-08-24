@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Finished objects and implemented interactability">
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Optimized player and tile image loading and scaling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UtilityTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UtilityTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/CastleDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/CastleDoor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/objBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objBoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/objChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objChest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/objDoor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objDoor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/objKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/objKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="collision" />
+        <entry key="$PROJECT_DIR$" value="ui" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,26 +49,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;objects&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/domir/IdeaProjects/dalirpg/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "utility",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/domir/IdeaProjects/dalirpg/src/Main.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles\new" />
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\sound" />
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\objects" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\maps" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles" />
-      <recent name="C:\Users\domir\IdeaProjects\dalirpg\src\res\player" />
-      <recent name="C:\Users\domir\IdeaProjects\dalirpg\src" />
-      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\player" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="res.player" />
@@ -205,7 +212,47 @@
       <option name="project" value="LOCAL" />
       <updated>1723829451596</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added running shoes and toggleable running">
+      <option name="closed" value="true" />
+      <created>1723914767573</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1723914767573</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added sound class and bg music player">
+      <option name="closed" value="true" />
+      <created>1723918184063</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1723918184063</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Finished sound however sfx can be spammed...">
+      <option name="closed" value="true" />
+      <created>1723919279768</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1723919279768</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Minimal ui added">
+      <option name="closed" value="true" />
+      <created>1724002723977</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1724002723977</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Optimized player and tile image loading and scaling">
+      <option name="closed" value="true" />
+      <created>1724379846260</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724379846260</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -225,7 +272,12 @@
     <MESSAGE value="Collision detection finished but, a little janky atm" />
     <MESSAGE value="Changed textures, added option to change texture packs. New map added. Starting work on objects" />
     <MESSAGE value="Finished objects and implemented interactability" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished objects and implemented interactability" />
+    <MESSAGE value="Added running shoes and toggleable running" />
+    <MESSAGE value="Added sound class and bg music player" />
+    <MESSAGE value="Finished sound however sfx can be spammed..." />
+    <MESSAGE value="Minimal ui added" />
+    <MESSAGE value="Optimized player and tile image loading and scaling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized player and tile image loading and scaling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
