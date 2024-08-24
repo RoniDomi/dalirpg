@@ -220,6 +220,30 @@ public class Player extends Entity {
                 break;
         }
 
-        g2D.drawImage(image, screenX, screenY, null);
+        int x = screenX;
+        int y = screenY;
+
+        if (screenX > worldX) {
+            x = worldX;
+        }
+
+        if (screenY > worldY) {
+            y = worldY;
+        }
+
+        // Right edge
+        int rightOffset = gp.screenWidth - screenX;
+        if (rightOffset > gp.worldWidth - worldX) {
+            x = gp.screenWidth - (gp.worldWidth - worldX);
+        }
+
+        // Bottom
+        int bottomOffset = gp.screenHeight - screenY;
+        if (bottomOffset > gp.worldHeight - worldY) {
+            y = gp.screenHeight - (gp.worldHeight - worldY);
+        }
+
+
+        g2D.drawImage(image, x, y, null);
     }
 }

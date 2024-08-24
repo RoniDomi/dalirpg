@@ -20,6 +20,8 @@ public class GamePanel extends JPanel implements Runnable {
     // World Map Settings
     public final int maxWorldCol = 50;
     public final int maxWorldRow = 50;
+    public final int worldWidth = maxWorldCol * tileSize;
+    public final int worldHeight = maxWorldRow * tileSize;
 
     // FPS
     int FPS = 60;
@@ -33,6 +35,7 @@ public class GamePanel extends JPanel implements Runnable {
     public CollisionChecker cChecker = new CollisionChecker(this);
     public AssetSetter aSetter = new AssetSetter(this);
     Thread gameThread;
+    public boolean musicStopped = false;
 
 
     // Entities and Objects
@@ -154,7 +157,9 @@ public class GamePanel extends JPanel implements Runnable {
         music.loop();
     }
 
-    public void stopMusic() {music.stop();}
+    public void stopMusic() {
+        music.stop();
+    }
 
     public void playSFX(int i) {
         sfx.setFile(i);
