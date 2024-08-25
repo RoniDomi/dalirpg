@@ -35,8 +35,8 @@ public class Player extends Entity {
     }
 
     public void setDefaultValues() {
-        worldX = gp.tileSize * 30;
-        worldY = gp.tileSize * 45;
+        worldX = gp.tileSize * 28;
+        worldY = gp.tileSize * 35;
         speed = 4;
     }
 
@@ -93,6 +93,10 @@ public class Player extends Entity {
             int objIndex = gp.cChecker.checkObject(this, true);
             pickUpObj(objIndex);
 
+            // Check npc collision
+            int npcIndex = gp.cChecker.checkEntity(this, gp.npc);
+            interactNpc(npcIndex);
+
             // If collision is false, player can move!
             if (!collisionOn) {
                 switch (direction) {
@@ -141,6 +145,12 @@ public class Player extends Entity {
     public void pickUpObj (int i) {
         if (i != 999) {
 
+        }
+    }
+
+    public void interactNpc (int i) {
+        if (i != 999) {
+            System.out.println("Hitting npc");
         }
     }
 
