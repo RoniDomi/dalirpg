@@ -4,12 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Game can be paused now, removed redundant stuff from previous demo">
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Camera doesn't show outside of map anymore. Also added a key to start/stop music">
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/npc/klaus/tile015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/AssetSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="game-state" />
+        <entry key="$PROJECT_DIR$" value="keep-camera-in-frame" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,7 +66,7 @@
     "Application.Unnamed.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "keep-camera-in-frame",
+    "git-widget-placeholder": "npc",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/domir/IdeaProjects/dalirpg/src/Main.java"
@@ -269,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724464864905</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Camera doesn't show outside of map anymore. Also added a key to start/stop music">
+      <option name="closed" value="true" />
+      <created>1724470079844</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724470079844</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -298,7 +323,8 @@
     <MESSAGE value="Added new tiles and map" />
     <MESSAGE value="Game can be paused now" />
     <MESSAGE value="Game can be paused now, removed redundant stuff from previous demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Game can be paused now, removed redundant stuff from previous demo" />
+    <MESSAGE value="Camera doesn't show outside of map anymore. Also added a key to start/stop music" />
+    <option name="LAST_COMMIT_MESSAGE" value="Camera doesn't show outside of map anymore. Also added a key to start/stop music" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
