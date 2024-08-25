@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Player-npc collision added. Not interchangeable yet">
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="npc-player collision also added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,19 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "npc",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/domir/IdeaProjects/dalirpg/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;npc&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/domir/IdeaProjects/dalirpg/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles\new" />
@@ -291,12 +292,19 @@
       <option name="project" value="LOCAL" />
       <updated>1724553685444</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="npc-player collision also added">
+      <option name="closed" value="true" />
+      <created>1724557098663</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724557098663</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed fps locker and added fps logging" />
     <MESSAGE value="Added bare-bones entity class, as well as player class. Imported assets" />
     <MESSAGE value="Added player sprites and animation" />
     <MESSAGE value="Made animation start only when moving" />
@@ -321,7 +329,8 @@
     <MESSAGE value="Camera doesn't show outside of map anymore. Also added a key to start/stop music" />
     <MESSAGE value="NPC appears on screen. Did some code reworking, making everything more expandable" />
     <MESSAGE value="Player-npc collision added. Not interchangeable yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Player-npc collision added. Not interchangeable yet" />
+    <MESSAGE value="npc-player collision also added" />
+    <option name="LAST_COMMIT_MESSAGE" value="npc-player collision also added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

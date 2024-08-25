@@ -1,8 +1,6 @@
 package main;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import object.objKey;
 
 public class UI {
 
@@ -41,15 +39,42 @@ public class UI {
         if (gp.gameState == gp.pauseState) {
             drawPauseScreen();
         }
+
+        if (gp.gameState == gp.dialogue) {
+            drawDialogueScreen();
+        }
     }
 
-    public void drawPauseScreen() {
+    public void drawPauseScreen () {
         String text = "Paused";
 
         int x = getCenterX(text);
         int y = gp.screenHeight / 2;
 
         g2D.drawString(text, x, y);
+    }
+
+    public void drawDialogueScreen () {
+        //  Dialogue Window
+        int x, y, width, height;
+
+        x = gp.tileSize * 2;
+        y = gp.tileSize / 2;
+        width = gp.screenWidth - gp.tileSize * 4;
+        height = gp.tileSize * 4;
+
+        drawSubWindow(x, y, width, height);
+    }
+
+    public void drawSubWindow (int x, int y, int width, int height) {
+        Color col = new Color(0, 0, 0);
+        g2D.setColor(col);
+        g2D.fillRoundRect(x, y, width, height, 10, 10);
+
+        col = new Color(255, 255, 255);
+        g2D.setColor(col);
+        g2D.setStroke(new BasicStroke(5));
+        g2D.drawRoundRect(x + 5, y + 5, width - 10, height - 10, 5, 5);
     }
 
     public int getCenterX (String text) {
