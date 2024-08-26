@@ -40,7 +40,26 @@ public class Entity {
     }
 
     public void speak () {
+        if (dialogue[dialogueIndex] == null) {
+            dialogueIndex = 0;
+        }
+        gp.ui.currentDialogue = dialogue[dialogueIndex];
+        dialogueIndex++;
 
+        switch (gp.player.direction) {
+            case "up", "diagonal up left", "diagonal up right":
+                direction = "down";
+                break;
+            case "down", "diagonal down left", "diagonal down right":
+                direction = "up";
+                break;
+            case "left":
+                direction = "right";
+                break;
+            case "right":
+                direction = "left";
+                break;
+        }
     }
 
     public void update() {
