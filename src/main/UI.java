@@ -69,7 +69,11 @@ public class UI {
         g2D.setFont(g2D.getFont().deriveFont(Font.PLAIN, 32F));
         x += gp.tileSize;
         y += gp.tileSize;
-        g2D.drawString(currentDialogue, x, y);
+
+        for (String line: currentDialogue.split("\n")) {
+            g2D.drawString(line, x, y);
+            y += 40;
+        }
     }
 
     public void drawSubWindow (int x, int y, int width, int height) {

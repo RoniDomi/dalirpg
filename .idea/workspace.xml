@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Dialogue window pops up on collision with npc">
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Dialogue lines switch, npc faces player and player can't phase through npc when moving diagonally.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
     </list>
@@ -311,12 +310,19 @@
       <option name="project" value="LOCAL" />
       <updated>1724615218834</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Dialogue lines switch, npc faces player and player can't phase through npc when moving diagonally.">
+      <option name="closed" value="true" />
+      <created>1724640987432</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1724640987432</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added player sprites and animation" />
     <MESSAGE value="Made animation start only when moving" />
     <MESSAGE value="Added 3 basic tiles, and began implementation of tilemap drawer. Added temp grass background." />
     <MESSAGE value="Merge pull request #1 from RoniDomi/tile-map&#10;&#10;Tile map added and player finished" />
@@ -341,7 +347,8 @@
     <MESSAGE value="Player-npc collision added. Not interchangeable yet" />
     <MESSAGE value="npc-player collision also added" />
     <MESSAGE value="Dialogue window pops up on collision with npc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dialogue window pops up on collision with npc" />
+    <MESSAGE value="Dialogue lines switch, npc faces player and player can't phase through npc when moving diagonally." />
+    <option name="LAST_COMMIT_MESSAGE" value="Dialogue lines switch, npc faces player and player can't phase through npc when moving diagonally." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
