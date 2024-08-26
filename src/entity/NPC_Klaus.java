@@ -12,6 +12,7 @@ public class NPC_Klaus extends Entity{
         speed = 1;
         spriteChangeSpeed = 16;
         getImage();
+        setDialogue();
     }
 
     public void getImage() {
@@ -54,6 +55,36 @@ public class NPC_Klaus extends Entity{
             }
 
             actionLockCounter = 0;
+        }
+    }
+
+    public void setDialogue () {
+        dialogue[0] = "Dali! You're finally here!";
+        dialogue[1] = "The master is looking for you.";
+        dialogue[2] = "I think you're finally going on a mission.";
+        dialogue[3] = "Go on then, what are you waiting for?";
+    }
+
+    public void speak () {
+        if (dialogue[dialogueIndex] == null) {
+            dialogueIndex = 0;
+        }
+        gp.ui.currentDialogue = dialogue[dialogueIndex];
+        dialogueIndex++;
+
+        switch (gp.player.direction) {
+            case "up", "diagonal up left", "diagonal up right":
+                direction = "down";
+                break;
+            case "down", "diagonal down left", "diagonal down right":
+                direction = "up";
+                break;
+            case "left":
+                direction = "right";
+                break;
+            case "right":
+                direction = "left";
+                break;
         }
     }
 }

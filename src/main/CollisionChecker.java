@@ -152,7 +152,7 @@ public class CollisionChecker {
                 target[i].solidArea.y = target[i].worldY + target[i].solidArea.y;
 
                 switch (entity.direction) {
-                    case "up":
+                    case "up", "diagonal up left", "diagonal up right":
                         entity.solidArea.y -= entity.speed;
 
                         if (entity.solidArea.intersects(target[i].solidArea)) {
@@ -160,7 +160,7 @@ public class CollisionChecker {
                             index = i;
                         }
                         break;
-                    case "down":
+                    case "down", "diagonal down left", "diagonal down right":
                         entity.solidArea.y += entity.speed;
 
                         if (entity.solidArea.intersects(target[i].solidArea)) {
@@ -206,14 +206,14 @@ public class CollisionChecker {
         gp.player.solidArea.y = gp.player.worldY + gp.player.solidArea.y;
 
         switch (entity.direction) {
-            case "up":
+            case "up", "diagonal up left", "diagonal up right":
                 entity.solidArea.y -= entity.speed;
 
                 if (entity.solidArea.intersects(gp.player.solidArea)) {
                     entity.collisionOn = true;
                 }
                 break;
-            case "down":
+            case "down", "diagonal down left", "diagonal down right":
                 entity.solidArea.y += entity.speed;
 
                 if (entity.solidArea.intersects(gp.player.solidArea)) {

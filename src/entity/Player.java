@@ -64,7 +64,7 @@ public class Player extends Entity {
     public void update() {
         if (keyH.downPressed || keyH.upPressed || keyH.leftPressed || keyH.rightPressed) {
 
-            speed = keyH.lShiftPressed && runningShoesEquipped ? sprintSpeed : defaultSpeed;
+            speed = keyH.lShiftPressed ? sprintSpeed : defaultSpeed;
             spriteChangeCount = speed > 4 ? 6 : 12;
 
             if (keyH.upPressed && keyH.rightPressed) {
@@ -151,6 +151,7 @@ public class Player extends Entity {
     public void interactNpc (int i) {
         if (i != 999) {
             gp.gameState = gp.dialogue;
+            gp.npc[i].speak();
         }
     }
 
