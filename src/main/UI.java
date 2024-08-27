@@ -1,14 +1,14 @@
 package main;
 
 import java.awt.*;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class UI {
 
     GamePanel gp;
     Graphics2D g2D;
-    Font arial60;
-    Font arial40;
-    Font arial20;
+    Font kitchenSink;
     public boolean messageOn = false;
     public String message = "";
     int messageCounter = 0;
@@ -17,9 +17,13 @@ public class UI {
 
     public UI (GamePanel gp) {
         this.gp = gp;
-        arial60 = new Font("Arial", Font.BOLD, 60);
-        arial40 = new Font("Arial", Font.PLAIN, 40);
-        arial20 = new Font("Arial", Font.PLAIN, 20);
+
+        try {
+            InputStream is = getClass().getResourceAsStream("/font/Kitchen Sink.ttf");
+            kitchenSink = Font.createFont(Font.TRUETYPE_FONT, is);
+        } catch (FontFormatException | IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void showMessage(String text) {
@@ -30,7 +34,7 @@ public class UI {
     public void draw (Graphics2D g2D) {
         this.g2D = g2D;
 
-        g2D.setFont(arial40);
+        g2D.setFont(kitchenSink);
         g2D.setColor(Color.white);
 
         if (gp.gameState == gp.playState) {

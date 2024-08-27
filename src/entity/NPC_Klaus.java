@@ -59,10 +59,10 @@ public class NPC_Klaus extends Entity{
     }
 
     public void setDialogue () {
-        dialogue[0] = "Dali! You're finally here!";
-        dialogue[1] = "The master is looking for you.";
-        dialogue[2] = "I think you're finally going \non a mission.";
-        dialogue[3] = "Go on then, what are you \nwaiting for?";
+        dialogue[0] = "Dali! You're \nfinally here!";
+        dialogue[1] = "The master is \nlooking for you.";
+        dialogue[2] = "I think you're \nfinally going \non a mission.";
+        dialogue[3] = "Go on then, \nwhat are you \nwaiting for?";
     }
 
     public void speak () {

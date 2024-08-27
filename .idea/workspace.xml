@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Multi line dialogue and key toggle">
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Moved dialogue controller to parent entity class">
+      <change afterPath="$PROJECT_DIR$/res/font/Kitchen Sink.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +56,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\font" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles\new" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\sound" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\objects" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\maps" />
-      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="res.player" />
@@ -323,12 +324,19 @@
       <option name="project" value="LOCAL" />
       <updated>1724642243983</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Moved dialogue controller to parent entity class">
+      <option name="closed" value="true" />
+      <created>1724642353136</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1724642353136</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Added 3 basic tiles, and began implementation of tilemap drawer. Added temp grass background." />
     <MESSAGE value="Merge pull request #1 from RoniDomi/tile-map&#10;&#10;Tile map added and player finished" />
     <MESSAGE value="Fixed player to screen center, added more assets and new map" />
     <MESSAGE value="Camera finished, added performance improvement by loading only tiles in view" />
@@ -353,7 +361,8 @@
     <MESSAGE value="Dialogue window pops up on collision with npc" />
     <MESSAGE value="Dialogue lines switch, npc faces player and player can't phase through npc when moving diagonally." />
     <MESSAGE value="Multi line dialogue and key toggle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Multi line dialogue and key toggle" />
+    <MESSAGE value="Moved dialogue controller to parent entity class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved dialogue controller to parent entity class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
