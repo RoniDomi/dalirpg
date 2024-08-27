@@ -11,9 +11,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Player extends Entity {
-    GamePanel gp;
     KeyHandler keyH;
-
     public final int screenX;
     public final int screenY;
     public int spriteChangeCount = 12;
@@ -22,7 +20,7 @@ public class Player extends Entity {
     boolean runningShoesEquipped = false;
 
     public Player(GamePanel gp, KeyHandler keyH) {
-        this.gp = gp;
+        super(gp);
         this.keyH = keyH;
 
         screenX = gp.screenWidth / 2 - (gp.tileSize / 2);
@@ -37,48 +35,36 @@ public class Player extends Entity {
     }
 
     public void setDefaultValues() {
-        worldX = gp.tileSize * 30;
-        worldY = gp.tileSize * 45;
+        worldX = gp.tileSize * 28;
+        worldY = gp.tileSize * 35;
         speed = 4;
     }
 
     public void getPlayerImage() {
-        down1 = setup("tile000");
-        down2 = setup("tile001");
-        down3 = setup("tile002");
-        down4 = setup("tile003");
-        up1 = setup("tile004");
-        up2 = setup("tile005");
-        up3 = setup("tile006");
-        up4 = setup("tile007");
-        left1 = setup("tile008");
-        left2 = setup("tile009");
-        left3 = setup("tile010");
-        left4 = setup("tile011");
-        right1 = setup("tile012");
-        right2 = setup("tile013");
-        right3 = setup("tile014");
-        right4 = setup("tile015");
+        down1 = setup("/player/new/tile000");
+        down2 = setup("/player/new/tile001");
+        down3 = setup("/player/new/tile002");
+        down4 = setup("/player/new/tile003");
+        up1 = setup("/player/new/tile004");
+        up2 = setup("/player/new/tile005");
+        up3 = setup("/player/new/tile006");
+        up4 = setup("/player/new/tile007");
+        left1 = setup("/player/new/tile008");
+        left2 = setup("/player/new/tile009");
+        left3 = setup("/player/new/tile010");
+        left4 = setup("/player/new/tile011");
+        right1 = setup("/player/new/tile012");
+        right2 = setup("/player/new/tile013");
+        right3 = setup("/player/new/tile014");
+        right4 = setup("/player/new/tile015");
     }
 
-    public BufferedImage setup (String imageName) {
-        UtilityTool uTool = new UtilityTool();
-        BufferedImage image = null;
 
-        try {
-            image = ImageIO.read(getClass().getResourceAsStream("/player/new/" + imageName + ".png"));
-            image = uTool.scaledImage(image, gp.tileSize, gp.tileSize);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return image;
-    }
 
     public void update() {
         if (keyH.downPressed || keyH.upPressed || keyH.leftPressed || keyH.rightPressed) {
 
-            speed = keyH.lShiftPressed && runningShoesEquipped ? sprintSpeed : defaultSpeed;
+            speed = keyH.lShiftPressed ? sprintSpeed : defaultSpeed;
             spriteChangeCount = speed > 4 ? 6 : 12;
 
             if (keyH.upPressed && keyH.rightPressed) {
@@ -106,6 +92,10 @@ public class Player extends Entity {
             // Check object collision
             int objIndex = gp.cChecker.checkObject(this, true);
             pickUpObj(objIndex);
+
+            // Check npc collision
+            int npcIndex = gp.cChecker.checkEntity(this, gp.npc);
+            interactNpc(npcIndex);
 
             // If collision is false, player can move!
             if (!collisionOn) {
@@ -156,6 +146,16 @@ public class Player extends Entity {
         if (i != 999) {
 
         }
+    }
+
+    public void interactNpc (int i) {
+        if (i != 999) {
+            if (keyH.enterPressed) {
+                gp.gameState = gp.dialogue;
+                gp.npc[i].speak();
+            }
+        }
+        gp.keyH.enterPressed = false;
     }
 
     public void draw(Graphics2D g2D) {

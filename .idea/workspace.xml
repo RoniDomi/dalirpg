@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Game can be paused now, removed redundant stuff from previous demo">
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Moved dialogue controller to parent entity class">
+      <change afterPath="$PROJECT_DIR$/res/font/Kitchen Sink.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="game-state" />
+        <entry key="$PROJECT_DIR$" value="keep-camera-in-frame" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,26 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "Application.Unnamed.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "keep-camera-in-frame",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/domir/IdeaProjects/dalirpg/src/Main.java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;npc&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/domir/IdeaProjects/dalirpg/src/Main.java&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\font" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles\new" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\sound" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\objects" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\maps" />
-      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="res.player" />
@@ -269,18 +268,75 @@
       <option name="project" value="LOCAL" />
       <updated>1724464864905</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Camera doesn't show outside of map anymore. Also added a key to start/stop music">
+      <option name="closed" value="true" />
+      <created>1724470079844</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724470079844</updated>
+    </task>
+    <task id="LOCAL-00024" summary="NPC appears on screen. Did some code reworking, making everything more expandable">
+      <option name="closed" value="true" />
+      <created>1724547723060</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1724547723061</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Player-npc collision added. Not interchangeable yet">
+      <option name="closed" value="true" />
+      <created>1724553685444</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1724553685444</updated>
+    </task>
+    <task id="LOCAL-00026" summary="npc-player collision also added">
+      <option name="closed" value="true" />
+      <created>1724557098663</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724557098663</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Dialogue window pops up on collision with npc">
+      <option name="closed" value="true" />
+      <created>1724615218834</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1724615218834</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Dialogue lines switch, npc faces player and player can't phase through npc when moving diagonally.">
+      <option name="closed" value="true" />
+      <created>1724640987432</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1724640987432</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Multi line dialogue and key toggle">
+      <option name="closed" value="true" />
+      <created>1724642243983</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1724642243983</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Moved dialogue controller to parent entity class">
+      <option name="closed" value="true" />
+      <created>1724642353136</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1724642353136</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Basic game loop implemented" />
-    <MESSAGE value="test commit" />
-    <MESSAGE value="Changed fps locker and added fps logging" />
-    <MESSAGE value="Added bare-bones entity class, as well as player class. Imported assets" />
-    <MESSAGE value="Added player sprites and animation" />
-    <MESSAGE value="Made animation start only when moving" />
-    <MESSAGE value="Added 3 basic tiles, and began implementation of tilemap drawer. Added temp grass background." />
     <MESSAGE value="Merge pull request #1 from RoniDomi/tile-map&#10;&#10;Tile map added and player finished" />
     <MESSAGE value="Fixed player to screen center, added more assets and new map" />
     <MESSAGE value="Camera finished, added performance improvement by loading only tiles in view" />
@@ -298,7 +354,15 @@
     <MESSAGE value="Added new tiles and map" />
     <MESSAGE value="Game can be paused now" />
     <MESSAGE value="Game can be paused now, removed redundant stuff from previous demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Game can be paused now, removed redundant stuff from previous demo" />
+    <MESSAGE value="Camera doesn't show outside of map anymore. Also added a key to start/stop music" />
+    <MESSAGE value="NPC appears on screen. Did some code reworking, making everything more expandable" />
+    <MESSAGE value="Player-npc collision added. Not interchangeable yet" />
+    <MESSAGE value="npc-player collision also added" />
+    <MESSAGE value="Dialogue window pops up on collision with npc" />
+    <MESSAGE value="Dialogue lines switch, npc faces player and player can't phase through npc when moving diagonally." />
+    <MESSAGE value="Multi line dialogue and key toggle" />
+    <MESSAGE value="Moved dialogue controller to parent entity class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved dialogue controller to parent entity class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
