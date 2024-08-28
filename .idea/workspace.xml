@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Custom font added">
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Title screen added along with basic ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -339,12 +338,19 @@
       <option name="project" value="LOCAL" />
       <updated>1724722263866</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Title screen added along with basic ui">
+      <option name="closed" value="true" />
+      <created>1724814497296</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1724814497296</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fixed player to screen center, added more assets and new map" />
     <MESSAGE value="Camera finished, added performance improvement by loading only tiles in view" />
     <MESSAGE value="Changed entity to concrete class, starting collision detection" />
     <MESSAGE value="Upwards collision and fixed&#10;diagonal movement" />
@@ -369,7 +375,8 @@
     <MESSAGE value="Multi line dialogue and key toggle" />
     <MESSAGE value="Moved dialogue controller to parent entity class" />
     <MESSAGE value="Custom font added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Custom font added" />
+    <MESSAGE value="Title screen added along with basic ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Title screen added along with basic ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

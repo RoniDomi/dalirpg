@@ -88,34 +88,34 @@ public class UI {
 
         // Menu
         if (commandNum == 0) {
-            g2D.setColor(new Color(255, 253, 232));
-            g2D.setFont(g2D.getFont().deriveFont(Font.BOLD, 26F));
-            title = "New Game";
-            x = getCenterX(title);
-            y += gp.tileSize * 4;
-            g2D.drawString(title, x, y);
-            g2D.setColor(new Color(255, 253, 232));
+            g2D.setColor(new Color(255, 202, 87));
         }
+        g2D.setFont(g2D.getFont().deriveFont(Font.BOLD, 26F));
+        title = "New Game";
+        x = getCenterX(title);
+        y += gp.tileSize * 4;
+        g2D.drawString(title, x, y);
+        g2D.setColor(new Color(255, 253, 232));
 
         g2D.setFont(g2D.getFont().deriveFont(Font.BOLD, 26F));
         if (commandNum == 1) {
-            g2D.setColor(new Color(255, 253, 232));
-            title = "Load Game";
-            x = getCenterX(title);
-            y += gp.tileSize;
-            g2D.drawString(title, x, y);
-            g2D.setColor(new Color(255, 253, 232));
+            g2D.setColor(new Color(255, 202, 87));
         }
+        title = "Load Game";
+        x = getCenterX(title);
+        y += gp.tileSize;
+        g2D.drawString(title, x, y);
+        g2D.setColor(new Color(255, 253, 232));
 
         g2D.setFont(g2D.getFont().deriveFont(Font.BOLD, 26F));
         if (commandNum == 2) {
-            g2D.setColor(new Color(255, 253, 232));
-            title = "Quit";
-            x = getCenterX(title);
-            y += gp.tileSize;
-            g2D.drawString(title, x, y);
-            g2D.setColor(new Color(255, 253, 232));
+            g2D.setColor(new Color(255, 202, 87));
         }
+        title = "Quit";
+        x = getCenterX(title);
+        y += gp.tileSize;
+        g2D.drawString(title, x, y);
+        g2D.setColor(new Color(255, 253, 232));
     }
 
     public void drawDialogueScreen () {
