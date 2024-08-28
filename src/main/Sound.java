@@ -16,6 +16,11 @@ public class Sound {
         soundUrl[3] = getClass().getResource("/sound/equip.wav");
         soundUrl[4] = getClass().getResource("/sound/mixkit-bonus-earned-in-video-game-2058.wav");
         soundUrl[5] = getClass().getResource("/sound/mixkit-game-level-completed-2059.wav");
+        soundUrl[6] = getClass().getResource("/sound/sonatina_letsadventure_1ATaleForTheJourney.wav");
+        soundUrl[7] = getClass().getResource("/sound/hover.wav");
+        soundUrl[8] = getClass().getResource("/sound/confirm.wav");
+        soundUrl[9] = getClass().getResource("/sound/pause.wav");
+        soundUrl[10] = getClass().getResource("/sound/unpause.wav");
     }
 
     public void setFile(int i) {

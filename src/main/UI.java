@@ -9,8 +9,6 @@ public class UI {
     GamePanel gp;
     Graphics2D g2D;
     Font kitchenSink;
-    public boolean messageOn = false;
-    public String message = "";
     public String currentDialogue;
     public int commandNum = 0;
 
@@ -23,11 +21,6 @@ public class UI {
         } catch (FontFormatException | IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public void showMessage(String text) {
-        message = text;
-        messageOn = true;
     }
 
     public void draw (Graphics2D g2D) {
@@ -52,8 +45,15 @@ public class UI {
     }
 
     public void drawPauseScreen () {
-        String text = "Paused";
+        // Opaque bg
+        g2D.setColor(new Color(0, 0, 0, 100));
+        g2D.fillRect(0, 0, gp.screenWidth, gp.screenHeight);
 
+        // Text
+        g2D.setColor(new Color(255, 253, 232));
+        g2D.setFont(g2D.getFont().deriveFont(Font.BOLD, 56F));
+
+        String text = "Paused";
         int x = getCenterX(text);
         int y = gp.screenHeight / 2;
 

@@ -71,30 +71,32 @@ public class Entity {
         gp.cChecker.checkObject(this, false);
         gp.cChecker.checkPlayer(this);
 
-        if (!collisionOn) {
-            switch (direction) {
-                case "up":    worldY -= speed; break;
-                case "down":  worldY += speed; break;
-                case "left":  worldX -= speed; break;
-                case "right": worldX += speed; break;
-            }
-        }
-
-        spriteCounter++;
-
         // Change sprite every x frames
-        if (spriteCounter > spriteChangeSpeed) {
-            if (spriteNum == 1) {
-                spriteNum = 2;
-            } else if (spriteNum == 2) {
-                spriteNum = 3;
-            } else if (spriteNum == 3) {
-                spriteNum = 4;
-            } else if (spriteNum == 4) {
-                spriteNum = 1;
+        if (gp.gameState == gp.playState) {
+            if (!collisionOn) {
+                switch (direction) {
+                    case "up":    worldY -= speed; break;
+                    case "down":  worldY += speed; break;
+                    case "left":  worldX -= speed; break;
+                    case "right": worldX += speed; break;
+                }
             }
 
-            spriteCounter = 0;
+            spriteCounter++;
+
+            if (spriteCounter > spriteChangeSpeed) {
+                if (spriteNum == 1) {
+                    spriteNum = 2;
+                } else if (spriteNum == 2) {
+                    spriteNum = 3;
+                } else if (spriteNum == 3) {
+                    spriteNum = 4;
+                } else if (spriteNum == 4) {
+                    spriteNum = 1;
+                }
+
+                spriteCounter = 0;
+            }
         }
     }
 
