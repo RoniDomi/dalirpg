@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Moved dialogue controller to parent entity class">
-      <change afterPath="$PROJECT_DIR$/res/font/Kitchen Sink.ttf" afterDir="false" />
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Title screen options change color to highlight chosen option">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="keep-camera-in-frame" />
+        <entry key="$PROJECT_DIR$" value="npc" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,7 +46,7 @@
     &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;npc&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;title-screen&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/domir/IdeaProjects/dalirpg/src/Main.java&quot;
@@ -332,14 +330,35 @@
       <option name="project" value="LOCAL" />
       <updated>1724642353136</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Custom font added">
+      <option name="closed" value="true" />
+      <created>1724722263866</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1724722263866</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Title screen added along with basic ui">
+      <option name="closed" value="true" />
+      <created>1724814497296</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1724814497296</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Title screen options change color to highlight chosen option">
+      <option name="closed" value="true" />
+      <created>1724814640420</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1724814640420</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Merge pull request #1 from RoniDomi/tile-map&#10;&#10;Tile map added and player finished" />
-    <MESSAGE value="Fixed player to screen center, added more assets and new map" />
-    <MESSAGE value="Camera finished, added performance improvement by loading only tiles in view" />
     <MESSAGE value="Changed entity to concrete class, starting collision detection" />
     <MESSAGE value="Upwards collision and fixed&#10;diagonal movement" />
     <MESSAGE value="Collision detection finished but, a little janky atm" />
@@ -362,7 +381,10 @@
     <MESSAGE value="Dialogue lines switch, npc faces player and player can't phase through npc when moving diagonally." />
     <MESSAGE value="Multi line dialogue and key toggle" />
     <MESSAGE value="Moved dialogue controller to parent entity class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved dialogue controller to parent entity class" />
+    <MESSAGE value="Custom font added" />
+    <MESSAGE value="Title screen added along with basic ui" />
+    <MESSAGE value="Title screen options change color to highlight chosen option" />
+    <option name="LAST_COMMIT_MESSAGE" value="Title screen options change color to highlight chosen option" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

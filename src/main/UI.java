@@ -11,9 +11,8 @@ public class UI {
     Font kitchenSink;
     public boolean messageOn = false;
     public String message = "";
-    int messageCounter = 0;
-    public boolean gameFinished = false;
     public String currentDialogue;
+    public int commandNum = 0;
 
     public UI (GamePanel gp) {
         this.gp = gp;
@@ -36,7 +35,9 @@ public class UI {
 
         g2D.setFont(kitchenSink);
         g2D.setColor(Color.white);
-
+        if (gp.gameState == gp.titleState) {
+            drawTitleScreen();
+        }
         if (gp.gameState == gp.playState) {
             // play state stuff
         }
@@ -57,6 +58,64 @@ public class UI {
         int y = gp.screenHeight / 2;
 
         g2D.drawString(text, x, y);
+    }
+
+    public void drawTitleScreen() {
+        // Background
+        g2D.setColor(new Color(30,40,176));
+        g2D.fillRect(0, 0, gp.screenWidth, gp.screenHeight);
+
+        // Title
+        g2D.setFont(g2D.getFont().deriveFont(Font.BOLD, 56F));
+        String title = "Dali's Adventure";
+
+        int x, y;
+        x = getCenterX(title);
+        y = gp.tileSize * 3;
+
+        // Shadow text
+        g2D.setColor(new Color(34,3,34));
+        g2D.drawString(title, x + 5, y + 5);
+
+        // Main color
+        g2D.setColor(new Color(255, 253, 232));
+        g2D.drawString(title, x, y);
+
+        // Player image
+        x = gp.screenWidth / 2 - (gp.tileSize * 2) / 2;
+        y += gp.tileSize * 2;
+        g2D.drawImage(gp.player.down2, x, y, gp.tileSize * 2, gp.tileSize * 2, null);
+
+        // Menu
+        if (commandNum == 0) {
+            g2D.setColor(new Color(255, 202, 87));
+        }
+        g2D.setFont(g2D.getFont().deriveFont(Font.BOLD, 26F));
+        title = "New Game";
+        x = getCenterX(title);
+        y += gp.tileSize * 4;
+        g2D.drawString(title, x, y);
+        g2D.setColor(new Color(255, 253, 232));
+
+        g2D.setFont(g2D.getFont().deriveFont(Font.BOLD, 26F));
+        if (commandNum == 1) {
+            g2D.setColor(new Color(255, 202, 87));
+        }
+        title = "Load Game";
+        x = getCenterX(title);
+        y += gp.tileSize;
+        g2D.drawString(title, x, y);
+        g2D.setColor(new Color(255, 253, 232));
+
+        g2D.setFont(g2D.getFont().deriveFont(Font.BOLD, 26F));
+        if (commandNum == 2) {
+            g2D.setColor(new Color(255, 202, 87));
+        }
+        title = "Quit";
+        x = getCenterX(title);
+        y += gp.tileSize;
+        g2D.drawString(title, x, y);
+        g2D.setColor(new Color(255, 253, 232));
     }
 
     public void drawDialogueScreen () {
