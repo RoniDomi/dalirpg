@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Title screen new game and quit done and functional">
-      <change afterPath="$PROJECT_DIR$/res/sound/confirm.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/hover.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/pause.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound/unpause.wav" afterDir="false" />
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Added some new sfx as well as cleaning up some stuff, ie. freezing npc during pause or dialogue state">
+      <change afterPath="$PROJECT_DIR$/res/sound/sonatina_letsadventure_1ATaleForTheJourney.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/EventHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/NPC_Klaus.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="npc" />
+        <entry key="$PROJECT_DIR$" value="title-screen" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,19 +41,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;title-screen&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/domir/IdeaProjects/dalirpg/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "events",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/domir/IdeaProjects/dalirpg/src/Main.java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\sound" />
@@ -370,12 +364,19 @@
       <option name="project" value="LOCAL" />
       <updated>1724815378515</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added some new sfx as well as cleaning up some stuff, ie. freezing npc during pause or dialogue state">
+      <option name="closed" value="true" />
+      <created>1724882836209</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1724882836209</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Upwards collision and fixed&#10;diagonal movement" />
     <MESSAGE value="Collision detection finished but, a little janky atm" />
     <MESSAGE value="Changed textures, added option to change texture packs. New map added. Starting work on objects" />
     <MESSAGE value="Finished objects and implemented interactability" />
@@ -400,7 +401,8 @@
     <MESSAGE value="Title screen added along with basic ui" />
     <MESSAGE value="Title screen options change color to highlight chosen option" />
     <MESSAGE value="Title screen new game and quit done and functional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Title screen new game and quit done and functional" />
+    <MESSAGE value="Added some new sfx as well as cleaning up some stuff, ie. freezing npc during pause or dialogue state" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some new sfx as well as cleaning up some stuff, ie. freezing npc during pause or dialogue state" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
