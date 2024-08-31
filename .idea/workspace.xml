@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Title screen options change color to highlight chosen option">
+    <list default="true" id="2e3fd3a8-da56-47e7-9b5f-b39536f84ff2" name="Changes" comment="Title screen new game and quit done and functional">
+      <change afterPath="$PROJECT_DIR$/res/sound/confirm.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sound/hover.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sound/pause.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sound/unpause.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +62,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\sound" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\font" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\tiles\new" />
-      <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\sound" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\objects" />
       <recent name="C:\Users\domir\IdeaProjects\dalirpg\res\maps" />
     </key>
@@ -354,12 +362,19 @@
       <option name="project" value="LOCAL" />
       <updated>1724814640420</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Title screen new game and quit done and functional">
+      <option name="closed" value="true" />
+      <created>1724815378515</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1724815378515</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changed entity to concrete class, starting collision detection" />
     <MESSAGE value="Upwards collision and fixed&#10;diagonal movement" />
     <MESSAGE value="Collision detection finished but, a little janky atm" />
     <MESSAGE value="Changed textures, added option to change texture packs. New map added. Starting work on objects" />
@@ -384,7 +399,8 @@
     <MESSAGE value="Custom font added" />
     <MESSAGE value="Title screen added along with basic ui" />
     <MESSAGE value="Title screen options change color to highlight chosen option" />
-    <option name="LAST_COMMIT_MESSAGE" value="Title screen options change color to highlight chosen option" />
+    <MESSAGE value="Title screen new game and quit done and functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Title screen new game and quit done and functional" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

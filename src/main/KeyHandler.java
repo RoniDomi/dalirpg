@@ -25,6 +25,7 @@ public class KeyHandler implements KeyListener {
             // Up
             if (code == KeyEvent.VK_W || code == KeyEvent.VK_UP) {
                 gp.ui.commandNum--;
+                gp.playSFX(7);
                 if (gp.ui.commandNum < 0) {
                     gp.ui.commandNum = 2;
                 }
@@ -33,6 +34,7 @@ public class KeyHandler implements KeyListener {
             // Down
             if (code == KeyEvent.VK_S || code == KeyEvent.VK_DOWN) {
                 gp.ui.commandNum++;
+                gp.playSFX(7);
                 if (gp.ui.commandNum > 2) {
                     gp.ui.commandNum = 0;
                 }
@@ -40,9 +42,11 @@ public class KeyHandler implements KeyListener {
 
             // Enter
             if (code == KeyEvent.VK_ENTER) {
+                gp.playSFX(8);
                 switch (gp.ui.commandNum) {
                     case 0:
                         gp.gameState = gp.playState;
+                        gp.stopMusic();
                         gp.playMusic(0);
                         break;
                     case 1:
@@ -74,6 +78,7 @@ public class KeyHandler implements KeyListener {
             }
 
             if (code == KeyEvent.VK_ESCAPE) {
+                gp.playSFX(9);
                 gp.gameState = gp.pauseState;
             }
 
@@ -85,6 +90,7 @@ public class KeyHandler implements KeyListener {
         // Pause State
         else if (gp.gameState == gp.pauseState) {
             if (code == KeyEvent.VK_ESCAPE) {
+                gp.playSFX(10);
                 gp.gameState = gp.playState;
             }
         }
